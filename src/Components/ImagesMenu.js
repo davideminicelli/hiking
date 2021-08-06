@@ -6,7 +6,7 @@ const ImagesMenu = ({items})=> {
             item => {
                 return (
                 <a key={item.id} href={item.url}>
-                    <div style={{backgroundImage: item.imageUrl, backgroundColor: 'blue', width: "100px", height: "150px"}}>
+                    <div style={{backgroundImage: item.imageUrl, backgroundColor: '#ccd', width: "100px", height: "150px"}}>
                         <p>{item.name}</p>
                     </div>
                 </a>
