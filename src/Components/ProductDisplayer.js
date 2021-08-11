@@ -1,6 +1,7 @@
 import React from 'react';
 import { products } from '../Data/products';
 import { connect } from 'react-redux';
+import { addToBasket } from '../Actions';
 
 const ProductDisplayer = props => {
 
@@ -12,7 +13,7 @@ const ProductDisplayer = props => {
                 return (
                     <div>
                         <p>{product.name}, Price: {product.price}£</p>
-                        <button>Buy Now</button>
+                        <button onClick={()=> props.addToBasket(product)}>Buy Now</button>
                     </div>
                 )
             }
@@ -34,4 +35,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(ProductDisplayer);
+export default connect(mapStateToProps, {addToBasket})(ProductDisplayer);

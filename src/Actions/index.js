@@ -17,3 +17,25 @@ export const updateCategories = ()=> {
     payload: selected
     }
 }
+
+export const addToBasket = item => {
+    return {
+        type: 'ADD_TO_BASKET',
+        payload: {
+            name: item.name,
+            price: item.price,
+            quantity: 1,
+            id: item.id
+        }
+    }
+}
+
+export const removeFromBasket = item => {
+    return {
+        type: 'REMOVE_FROM_BASKET',
+        payload: {
+            id: item.id,
+            quantity: item.quantity
+        }
+    }
+}
