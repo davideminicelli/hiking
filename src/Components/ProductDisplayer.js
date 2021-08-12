@@ -11,7 +11,7 @@ const ProductDisplayer = props => {
         product => {
             if (selection.indexOf(product.category) !== -1) {
                 return (
-                    <div>
+                    <div key={product.id+"display"}>
                         <p>{product.name}, Price: {product.price}£</p>
                         <button onClick={()=> props.addToBasket(product)}>Buy Now</button>
                     </div>

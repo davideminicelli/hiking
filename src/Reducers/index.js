@@ -9,9 +9,9 @@ const selectedCategoriesReducer = (selectedCategories =[], action)=> {
 
 const basketReducer = (basketContent =[], action)=> {
     
+    const fromBasketContent = basketContent;
     
     if (action.type === 'ADD_TO_BASKET') {
-        const fromBasketContent = basketContent;
         let checker = 0;
         fromBasketContent.map(
             singleItem => {
@@ -27,15 +27,13 @@ const basketReducer = (basketContent =[], action)=> {
     }
 
     else if (action.type === 'REMOVE_FROM_BASKET') {
-        const fromBasketContent = basketContent;
         fromBasketContent.map(
             single => {
                 if (single.id === action.payload.id) {
                     if (single.quantity > 1) {
-                        single.quantity--
-                    }
-                    else {
-                        fromBasketContent.splice(single.indexOf, 1)
+                        single.quantity--;
+                    } else {
+                        fromBasketContent.splice(fromBasketContent.indexOf(single), 1);
                     }
                 }
             }

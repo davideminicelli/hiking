@@ -6,12 +6,13 @@ import { removeFromBasket } from '../Actions';
 const Basket = (props)=> {
 
 const productsInBasket = props.basketContent.map(
-        product => {return (
-        <div>
-            <p key={product.id}>{product.name}, price: {product.price}£, Quantity: {product.quantity}</p>
+        product => {
+            return (
+        <div key={product.id+"Basket"}>
+            <p>{product.name}, price: {product.price}£, Quantity: {product.quantity}</p>
             <button onClick={() => props.removeFromBasket(product)}>Remove Item</button>
         </div>
-        )
+            )
         }
     );
 
