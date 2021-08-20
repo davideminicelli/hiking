@@ -1,7 +1,7 @@
 // IMPORT STYLES
 
 // IMPORT DATA
-import { introCopy } from '../Data/copy';
+import { introCopy, mainHeroCopy, blogHeroCopy } from '../Data/copy';
 import { shopMenu } from '../Data/menuData';
 
 // IMPORT COMPONENTS
@@ -13,17 +13,16 @@ import ImagesMenu from './ImagesMenu';
 
 const Homepage = ()=> {
     
-    
     return (
         <section>
-            <Hero title="Gear up. Start exploring.">
-            <a className="hero-button" href="/shop">Shop Now</a>
+            <Hero title={mainHeroCopy.heading} mainHero="on" background="">
+            <a className="hero-button" href="/shop">{mainHeroCopy.buttonCopy}</a>
                   </Hero>
                   <Text headingType="h2" data={introCopy} />
                   <ImagesMenu items={shopMenu.items} />
-                  <Hero title="Muddy Diaries">
-            <p className="hero-subtitle">A Blog about Nature, and lives well lived</p>
-            <a className="hero-button" href="/">visit Blog</a>
+                  <Hero title={blogHeroCopy.heading}>
+            <p>{blogHeroCopy.subtitle}</p>
+            <a href="/">{blogHeroCopy.buttonCopy}</a>
                   </Hero>
         </section>
     )

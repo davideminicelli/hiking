@@ -1,3 +1,16 @@
+// HERO
+export const mainHeroCopy = {
+    heading: "Gear up. Start exploring.",
+    buttonCopy: "Shop Now"
+}
+
+export const blogHeroCopy = {
+    heading: "Muddy Diaries",
+    subtitle: "A Blog about Nature, and lives well lived",
+    buttonCopy: "Visit Blog"
+}
+
+// OTHER
 export const introCopy = {
     
     heading: `When adventure calls, be prepared`,

@@ -1,5 +1,5 @@
 export const mainMenu = {
-    title: "Logo",
+    title: "Menu",
     items: [
         {
         name: "Home",

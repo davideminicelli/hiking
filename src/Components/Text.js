@@ -13,6 +13,7 @@ const Text = ({data, headingType})=> {
         }
     }
 
+
     return (
         <div className="textWrapper">
             {textHeading()}
